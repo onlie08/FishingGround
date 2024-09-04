@@ -1,0 +1,58 @@
+.容器 {
+    padding: 20px;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.抽号区域 {
+    margin-top: 0px;
+    height: 100%;
+}
+
+.信息容器 {
+    display: block; /* 使用块级元素 */
+}
+
+.鱼塘名称, .鱼情介绍, .时间文本 {
+    display: block; /* 确保每个文本在新的一行显示 */
+    margin: 5px 0; /* 设置上下间距 */
+    font-size: 16px; /* 设置字体大小 */
+    color: #333; /* 设置字体颜色 */
+}
+
+.抽号按钮 {
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    transition: transform 0.2s;
+}
+
+.抽号按钮:active {
+    transform: scale(0.95);
+}
+
+.结果显示 {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+.号码文本 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #d32f2f;
+}
+
+.地图区域 {
+    margin-top: 20px;
+    flex-grow: 1; /* 让地图区域占据剩余空间 */
+    width: 100%;
+}

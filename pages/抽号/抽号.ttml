@@ -1,0 +1,21 @@
+<view class="容器">
+    <view class="抽号区域">
+      <view class="信息容器">
+        <text class="鱼塘名称">鱼塘名称: {{fishPondName}}</text>
+        <text class="鱼情介绍">{{fishCondition}}</text>
+        <text class="时间文本">抽号时间: {{开放时间}} - {{结束时间}}</text>
+      </view>
+      
+      <button class="抽号按钮" bindtap="startDraw" disabled="{{isDrawing}}">开始抽号</button>
+      
+      <view wx:if="{{drawResult}}" class="结果显示">
+        <text class="号码文本">您抽到的号码是: <text class="高亮号码">{{drawResult.number}}</text></text>
+        <text>钓位: {{drawResult.position}}</text>
+      </view>
+      
+      <view class="地图区域"> 
+        <map latitude="{{latitude}}" longitude="{{longitude}}" enable-traffic="false" style="width: 100%; height: 100%;"enable-satellite="true" scale="19" style="width: 100%; height: 300px;"></map>
+      </view>
+    </view>
+  </view>
+  

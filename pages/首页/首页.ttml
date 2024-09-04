@@ -1,0 +1,46 @@
+<view class="container">
+  <!-- 轮播控件 -->
+  <swiper class="swiper" easing-function="default" indicator-dots="{{indicatorDots}}" indicator-color="rgba(0, 0, 0, .3)"
+    indicator-active-color="rgba(0, 0, 0, 1)" current="{{current}}" autoplay="{{autoplay}}"
+    interval="{{interval}}" circular="{{circular}}" vertical="{{vertical}}" duration="{{duration}}">
+    <block wx:for="{{background}}" wx:key="index">
+      <swiper-item>
+        <view class="swiper-item {{item}}"></view>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <block wx:for="{{fishingSpots}}" wx:key="id">
+    <view class="row title">
+        <text class="title-text">{{item.name}}</text>
+    </view>
+
+    <!-- 钓场评分和介绍 -->
+    <view class="row rating">
+        <image class="icon" src="home_fill.png" />
+        <text class="rating-text">钓场评分：{{item.rating}}分</text>
+        <text class="intro" bindtap="onIntroClick">钓场介绍></text>
+    </view>
+    
+    <!-- 位置和按钮 -->
+    <view class="row location">
+        <image class="icon" src="home_fill.png" />
+        <text class="location-text">{{item.location}}</text>
+        <button class="call-button">电话</button>
+        <button class="nav-button">导航</button>
+    </view>
+    
+    <!-- 距离 -->
+    <view class="row distance">
+        <text class="distance-text">距离您 5km</text>
+    </view>
+  </block>
+
+  <!-- 功能入口 -->
+  <view class="features">
+    <button class="feature-button" bindtap="navigateTo" data-target="latestFish">最新鱼讯</button>
+    <button class="feature-button" bindtap="navigateTo" data-target="draw">抽号入口</button>
+    <button class="feature-button" bindtap="navigateTo" data-target="contactOwner">联系老板</button>
+    <button class="feature-button" bindtap="navigateTo" data-target="highlights">精彩集锦</button>
+  </view>
+</view>
