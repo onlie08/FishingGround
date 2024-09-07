@@ -4,7 +4,8 @@
     "pages/抽号/抽号",
     "pages/活动/活动",
     "pages/我的/我的",
-    "pages/抽号管理/抽号管理"
+    "pages/抽号管理/抽号管理",
+    "pages/钓位管理/钓位管理"
   ],
   "window": {
     "navigationBarTitleText": "钓场小程序",

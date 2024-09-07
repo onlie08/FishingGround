@@ -1,0 +1,26 @@
+<view class="容器">
+    <map 
+        latitude="{{latitude}}" 
+        longitude="{{longitude}}" 
+        enable-traffic="false" 
+        enable-satellite="true" 
+        scale="19" 
+        style="width: 100%; height: 100%;"
+        bindregionchange="onRegionChange"
+        markers="{{markers}}">
+    </map>
+    
+    <view class="十字标记"></view> <!-- 十字标记 -->
+    
+    <view class="底部面板"> <!-- 半透明的底部面板 -->
+        <view class="号码输入组">
+            <input class="号码输入框" placeholder="起点号码" bindinput="onStartPointInput" />
+            <input class="号码输入框" placeholder="终点号码" bindinput="onEndPointInput" />
+        </view>
+        <view class="按钮组">
+            <button class="开始选点按钮" bindtap="startSelect" disabled="{{!canStartSelect}}">开始选点</button>
+            <button class="结束选点按钮" bindtap="endSelect" disabled="{{!canEndSelect}}">结束选点</button>
+        </view>
+        <button class="上传按钮" bindtap="uploadMarkers" disabled="{{!canUpload}}">开始上传</button>
+    </view>
+</view>

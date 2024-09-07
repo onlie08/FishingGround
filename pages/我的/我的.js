@@ -40,7 +40,7 @@ Page({
 
   navigateTo收费管理: function () {
     tt.navigateTo({
-      url: '/pages/收费管理/收费管理'
+      url: '/pages/钓位管理/钓位管理'
     });
   },
 
